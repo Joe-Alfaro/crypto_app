@@ -12,3 +12,9 @@ services:
       - "8000:8000"
     depends_on:
       - db
+  cli:
+    build: .
+    entrypoint: ./cli
+    working_dir: /code/cli
+    volumes:
+      - .:/code
